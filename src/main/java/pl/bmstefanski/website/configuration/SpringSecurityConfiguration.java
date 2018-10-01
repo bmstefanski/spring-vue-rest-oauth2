@@ -20,16 +20,15 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
   @Override
   protected void configure(HttpSecurity http) throws Exception {
-    http.formLogin()
+    http
+        .formLogin()
         .loginPage("/login")
         .failureUrl("/login-fail")
         .defaultSuccessUrl("/home")
         .and()
         .logout().deleteCookies("JSESSIONID")
         .logoutUrl("/logout")
-        .logoutSuccessUrl("/home")
-        .and()
-        .rememberMe().key("niceSuperUniqueKey").tokenValiditySeconds(86400);
+        .logoutSuccessUrl("/home");
   }
 
 }
