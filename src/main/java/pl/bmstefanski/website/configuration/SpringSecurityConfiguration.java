@@ -22,14 +22,14 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
   protected void configure(HttpSecurity http) throws Exception {
     http.formLogin()
         .loginPage("/login")
+        .failureUrl("/login-fail")
         .defaultSuccessUrl("/home")
         .and()
-        .logout()
+        .logout().deleteCookies("JSESSIONID")
         .logoutUrl("/logout")
         .logoutSuccessUrl("/home")
         .and()
-        .authorizeRequests()
-        .antMatchers("/", "/home").permitAll();
+        .rememberMe().key("niceSuperUniqueKey").tokenValiditySeconds(86400);
   }
 
 }
