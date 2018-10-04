@@ -28,7 +28,9 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
         .and()
         .logout().deleteCookies("JSESSIONID")
         .logoutUrl("/logout")
-        .logoutSuccessUrl("/home");
+        .logoutSuccessUrl("/home")
+        .and()
+        .oauth2Login().loginPage("/login").failureUrl("/login-fail");
   }
 
 }
