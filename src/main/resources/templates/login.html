@@ -6,21 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="bmstefanski">
   <link rel="icon" href="/images/favicon.png">
-
   <title>Log In</title>
-
   <link href="/webjars/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/login.css" rel="stylesheet">
   <link href="/css/font-awesome.css" rel="stylesheet">
   <link href="/css/bootstrap-social.css" rel="stylesheet">
 </head>
-
 <body>
 <form class="form-signin" th:action="@{/login}" method="post">
   <div class="text-center mb-4">
     <img class="mb-4" src="/images/favicon.png" alt="">
   </div>
-
   <p th:if="${isFail}" style="color: red">The login details are incorrect</p>
   <div class="form-label-group">
     <input type="text" name="username" id="username" class="form-control" placeholder="Login"
@@ -28,7 +24,6 @@
            autofocus>
     <label for="username">Login</label>
   </div>
-
   <div class="form-label-group">
     <input type="password" name="password" id="password" class="form-control" placeholder="Password"
            required>
@@ -49,7 +44,6 @@
       <span class="fa fa-github"></span> Sign in with Github
     </a>
   </div>
-
   <button sec:authorize="isAuthenticated()" class="btn btn-lg btn-primary btn-block" type="submit"
           disabled>
     Sign in

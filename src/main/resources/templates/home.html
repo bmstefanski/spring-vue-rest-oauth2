@@ -4,15 +4,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="bmstefanski">
   <link rel="icon" href="/images/favicon.png">
-
   <title>Home</title>
-
   <link href="/webjars/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/home.css" rel="stylesheet">
 </head>
-
 <body class="text-center">
-
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="masthead mb-auto">
     <div class="inner">
@@ -24,12 +20,10 @@
       </nav>
     </div>
   </header>
-
   <main role="main" class="inner cover">
     <div sec:authorize="isAuthenticated()">
       <h1 class="cover-heading">Welcome <span sec:authentication="name"></span></h1>
     </div>
-
     <div sec:authorize="!isAuthenticated()">
       <h1 class="cover-heading">You are not logged in!</h1>
       <p class="lead">
@@ -37,13 +31,11 @@
       </p>
     </div>
   </main>
-
   <footer class="mastfoot mt-auto">
     <div class="inner">
       <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
     </div>
   </footer>
 </div>
-
 </body>
 </html>
