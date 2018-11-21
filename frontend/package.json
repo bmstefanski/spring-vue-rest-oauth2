@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "nodemon ./node_modules/@vue/cli-service/bin/vue-cli-service.js serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "nodemon": "^1.18.6",
     "vue": "^2.5.17"
   },
   "devDependencies": {
