@@ -24,4 +24,5 @@ before_install:
 - unset _JAVA_OPTIONS
 
 script:
+- cd backend
 - mvn clean install spring-boot:repackage
