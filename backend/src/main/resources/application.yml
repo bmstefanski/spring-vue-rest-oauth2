@@ -1,0 +1,16 @@
+# LOGGER
+logging:
+  level:
+    org:
+      springframework: warn
+      mongodb: warn
+      apache: warn
+    pl:
+      bmstefanski: warn
+
+# MONGODB
+spring:
+  data:
+    mongodb:
+      uri: "mongodb://127.0.0.1:27017"
+      database: "website"
