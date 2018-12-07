@@ -1,0 +1,11 @@
+▀████    ▐████▀ ████████▄
+  ███▌   ████▀  ███   ▀███
+   ███  ▐███    ███    ███
+   ▀███▄███▀    ███    ███
+   ████▀██▄     ███    ███
+  ▐███  ▀███    ███    ███
+ ▄███     ███▄  ███   ▄███
+████       ███▄ ████████▀
+
+${AnsiColor.BLACK}█${AnsiColor.GREEN}█${AnsiColor.BLUE}█${AnsiColor.BRIGHT_BLACK}█${AnsiColor.BRIGHT_CYAN}█${AnsiColor.BRIGHT_GREEN}█${AnsiColor.BRIGHT_MAGENTA}█${AnsiColor.BRIGHT_RED}█${AnsiColor.BRIGHT_WHITE}█${AnsiColor.BRIGHT_YELLOW}█${AnsiColor.CYAN}█${AnsiColor.MAGENTA}█${AnsiColor.RED}█${AnsiColor.WHITE}█${AnsiColor.YELLOW}█
+${AnsiColor.GREEN}:: Spring Boot ::  ${AnsiColor.BLACK} Running ${spring-boot.version}
