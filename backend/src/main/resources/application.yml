@@ -1,0 +1,23 @@
+server:
+  port: 3000
+  servlet:
+    session:
+      cookie:
+        name: backend-session
+security:
+  oauth2:
+    sso:
+      login-path: /sessions/github
+    client:
+      client-id: clientid
+      client-secret: clientsecret
+      access-token-uri: https://github.com/login/oauth/access_token
+      user-authorization-uri: https://github.com/login/oauth/authorize
+      token-name: oauth_token
+      authentication-scheme: query
+      client-authentication-scheme: form
+      scope: user
+    resource:
+      prefer-token-info: false
+      user-info-uri: https://api.github.com/user
+
