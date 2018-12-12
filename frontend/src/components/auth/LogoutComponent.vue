@@ -1,9 +1,14 @@
 <template>
-  <h1>Logout </h1>
+  <a class="btn btn-block" @click.prevent="logout"></a>
 </template>
 
 <script>
   export default {
-    name: "Logout"
+    name: "Logout",
+    methods: {
+      logout() {
+        this.$store.dispatch("logout");
+      }
+    }
   };
 </script>

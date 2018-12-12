@@ -23,6 +23,16 @@ export default new Vuex.Store({
       }).catch(() => {
         commit(SET_USER, {});
       });
+    },
+    logout({commit}) {
+      commit(SET_USER, {});
+      localStorage.setItem("currentUser", {});
+      document.cookie = "backend-session" + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    }
+  },
+  getters: {
+    isAuthenticated: (state) => {
+      return state.currentUser.toString().includes("name");
     }
   }
 })
