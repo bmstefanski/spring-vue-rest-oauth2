@@ -1,9 +1,9 @@
 <template>
-<h1>Logout </h1>
+  <h1>Logout </h1>
 </template>
 
 <script>
-    export default {
-      name: "Logout"
-    };
+  export default {
+    name: "Logout"
+  };
 </script>

@@ -20,30 +20,20 @@
 </template>
 
 <style>
-  /*
-                                                           * Globals
-                                                           */
-
-  /* Links */
   a,
   a:focus,
   a:hover {
     color: #fff;
   }
 
-  /* Custom default button */
   .btn-secondary,
   .btn-secondary:hover,
   .btn-secondary:focus {
     color: #333;
-    text-shadow: none; /* Prevent inheritance from `body` */
+    text-shadow: none; 
     background-color: #fff;
     border: 0.05rem solid #fff;
   }
-
-  /*
-                                                           * Base structure
-                                                           */
 
   html,
   body {
@@ -63,9 +53,6 @@
     max-width: 42em;
   }
 
-  /*
-                                                           * Header
-                                                           */
   .masthead {
     margin-bottom: 2rem;
   }
@@ -105,9 +92,6 @@
     }
   }
 
-  /*
-                                                           * Cover
-                                                           */
   .cover {
     padding: 0 1.5rem;
   }
@@ -116,9 +100,6 @@
     font-weight: 700;
   }
 
-  /*
-                                                           * Footer
-                                                           */
   .mastfoot {
     color: rgba(255, 255, 255, 0.5);
   }

@@ -1,35 +1,19 @@
 <template>
-<form class="form-signin" method="post">
-  <div class="form-label-group">
-    <input type="text" name="username" id="username" class="form-control" placeholder="Login"
-           required
-           autofocus>
-    <label for="username">Login</label>
-  </div>
-  <div class="form-label-group">
-    <input type="password" name="password" id="password" class="form-control" placeholder="Password"
-           required>
-    <label for="password">Password</label>
-  </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">
-      Sign in
-    </button>
-    <a class="btn btn-block btn-social btn-facebook">
-      <span class="fa fa-facebook"></span> Sign in with Facebook
-    </a>
-    <a class="btn btn-block btn-social btn-google">
-      <span class="fa fa-google"></span> Sign in with Google
-    </a>
-    <a class="btn btn-block btn-social btn-github">
-      <span class="fa fa-github"></span> Sign in with Github
-    </a>
-</form>
+  <a class="btn btn-block btn-social btn-github" @click.prevent="login">
+    <span class="fa fa-github"></span> Sign in with Github
+  </a>
 </template>
 
 <script>
   export default {
-    name: "Login"
-  };
+    name: "Login",
+    methods: {
+      login() {
+        window.location.href = "http://localhost:3000/sessions/github/callback";
+      }
+    }
+  }
+
 </script>
 
 <style scoped>
@@ -108,6 +92,7 @@
     .form-label-group > label {
       display: none;
     }
+
     .form-label-group input::-ms-input-placeholder {
       color: #777;
     }
@@ -119,6 +104,7 @@
     .form-label-group > label {
       display: none;
     }
+
     .form-label-group input:-ms-input-placeholder {
       color: #777;
     }
