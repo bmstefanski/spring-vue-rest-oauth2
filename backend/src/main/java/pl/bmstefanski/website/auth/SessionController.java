@@ -15,8 +15,8 @@ public class SessionController {
   @GetMapping("sessions/me")
   public ResponseEntity<?> user(Principal principal) {
     if (principal == null) {
-      return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
-          .body(Collections.singletonMap("error", "unauthorized"));
+      return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Collections.singletonMap("error", "unauthorized"));
+      // dat not me!!!!!!! TODO should be custom exception handler
     }
 
     return ResponseEntity.ok(principal);
